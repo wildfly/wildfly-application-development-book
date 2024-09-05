@@ -1,0 +1,11 @@
+= WildFly application development guide
+
+== Building the HTML output
+
+To build the HTML output, use the following command:
+
+----
+$ mvn compile
+----
+
+This generates the HTML file `main.html` in the `target/generated-docs` directory.
