@@ -8,7 +8,7 @@
 [role="_abstract"]
 Create an integration test that verifies that the application is deployed and running on {ProductShortName} on {cloudPlatform}, by checking that the HTTP GET of its web page returns 200 OK.
 
-In this procedure, _<application_home>_ refers to the directory that contains the `pom.xml` configuration file for the application.
+include::fragments/frag_application-home-info.adoc[]
 
 .Prerequisites
 
@@ -26,29 +26,29 @@ For more information, see xref:adding-the-maven-dependencies-required-for-junit-
  
 . Create a directory to store the test class.
 +
-[source,options="nowrap"]
+[source,options="nowrap",subs=+quotes]
 ----
-$ mkdir -p src/test/java/org/jboss/as/quickstarts/helloworld
+$ mkdir -p src/test/java/org/jboss/as/quickstarts/__<pjoject_name>__
 ----
 
 . Navigate to the new directory.
 +
-[source,options="nowrap"]
+[source,options="nowrap",subs=+quotes]
 ----
-$ cd src/test/java/org/jboss/as/quickstarts/helloworld
+$ cd src/test/java/org/jboss/as/quickstarts/__<pjoject_name>__
 ----
 
 . Create a Java class `HelloWorldServletIT.java` that tests the deployment.
 +
-[source,java,options="nowrap"]
+[source,java,options="nowrap",subs=+quotes]
 ----
 include::sources/HelloWorldServletIT.java[]
 ----
-<1> The URL at which the application is running. This value is used if `sever.host` is undefined.
+<1> The URL at which the application is running. This value is used if `sever.host` is undefined. Replace __<expected_url>__ with the URL you defined in the application.
 <2> Create an HttpRequest instance for the application URI.
 <3> Create an HttpClient to send requests to and receive response from the application.
 <4> Get response from the application.
-<5> Test that the response received from the application is "200" indicating that the application is rechable.
+<5> Test that the response received from the application is "200" indicating that the application is reachable.
 
 [role="_additional-resources"]
 .Next steps

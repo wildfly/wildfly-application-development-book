@@ -8,6 +8,8 @@
 [role="_abstract"]
 Use the {ProductShortname} Helm chart to configure and deploy application to {ProductShortname} on OpenShift with Helm.
 
+include::fragments/frag_application-home-info.adoc[]
+
 .Prerequisites
 
 * You have prepared your application for deployment on {cloudPlatform}.
@@ -32,7 +34,7 @@ For more information, see link:https://helm.sh/docs/intro/install/[Installing He
 
 .Procedure
 
-. Create a directory called `charts` in the application root directoy and navigate to it. Application root directory is the one that contains `pom.xml` configuration file.
+. Create a directory called `charts` in the application _<application_home>_ directory and navigate to it.
 +
 [source,options="nowrap"]
 ----
@@ -46,7 +48,7 @@ $ mkdir charts; cd charts
 build:
   uri: https://github.com/__<user>__/__<repository>__.git     <1>
   ref: __<branch_name>__                                  <2>
-  contextDir: helloworld                              <3>
+  contextDir: __<application_home>__                      <3>
 deploy:
   replicas: 1                                         <4>
 ----
@@ -73,18 +75,18 @@ $ helm repo update {helmName}
 
 . Deploy the application using helm.
 +
-[source,options="nowrap",subs=attributes+]
+[source,options="nowrap",subs="attributes+,+quotes"]
 ----
-$ helm install helloworld -f helm.yaml {helmChart}
+$ helm install __<application_home>__ -f helm.yaml {helmChart}
 ----
 
 .Verification
 
 . Get the URL of the route to the deployment.
 +
-[source,options="nowrap",subs=attributes+]
+[source,options="nowrap",subs=+quotes]
 ----
-$ APPLICATION_URL=https://$(oc get route {helm-app-name} --template='{{ .spec.host }}') &&
+$ APPLICATION_URL=https://$(oc get route __<application_home>__ --template='{{ .spec.host }}') &&
 echo "" &&
 echo "Application URL: $APPLICATION_URL"
 ----
@@ -93,7 +95,7 @@ The deployment can take a few minutes to complete.
 
 . To access the application, navigate to the Application URL of the deployment in a browser.
 +
-You are redirected to the servlet at path "/HelloWorld" and you get the following message:
+You are redirected to the URL you configured in your applications' `index.html` file, and you get the following message:
 +
 ----
 Hello World!

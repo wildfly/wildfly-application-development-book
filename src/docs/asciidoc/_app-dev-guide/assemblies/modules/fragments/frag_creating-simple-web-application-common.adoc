@@ -8,15 +8,15 @@ that includes this file.
 
 . Create a directory to store the Java files.
 +
-[source,options="nowrap",subs=attributes+]
+[source,options="nowrap",subs=+quotes]
 ----
-$ mkdir -p src/main/java/{helloworld-QS-path}
+$ mkdir -p src/main/java/__<project_name>__
 ----
 
 . Navigate to the new directory.
 +
-[source,options="nowrap",subs=attributes+]
+[source,options="nowrap",subs=+quotes]
 ----
-$ cd src/main/java/{helloworld-QS-path}
+$ cd src/main/java/__<project_name>__
 ----
 

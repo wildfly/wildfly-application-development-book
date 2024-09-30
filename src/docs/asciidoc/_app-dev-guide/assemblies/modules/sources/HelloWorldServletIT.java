@@ -1,4 +1,4 @@
-package org.jboss.as.quickstarts.helloworld;
+package org.jboss.as.quickstarts.__<project_name>__;
 
 import org.junit.Test;
 import java.io.IOException;
@@ -12,7 +12,8 @@ import static org.junit.Assert.assertEquals;
 
 public class HelloWorldServletIT {
 
-    private static final String DEFAULT_SERVER_HOST = "http://localhost:8080/helloworld";                //<1>
+    //Replace __<expected_url>__ with the URL you defined in the application
+    private static final String DEFAULT_SERVER_HOST = "http://localhost:8080/__<expected_url>__";                //<1>
 
     @Test
     public void testHTTPEndpointIsAvailable() throws IOException, InterruptedException, URISyntaxException {

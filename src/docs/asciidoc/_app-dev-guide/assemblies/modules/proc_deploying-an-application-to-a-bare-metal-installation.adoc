@@ -6,19 +6,18 @@
 [role="_abstract"]
 You can deploy an application to {ProductShortname} by using the {ProductShortname} deploy plug-in.
 
+include::fragments/frag_application-home-info.adoc[]
+
 .Prerequisites
 
 * You have created an application.
 +
-For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet].
+For more information, see xref:developing-a-hello-world-servlet-application_default[Developing applications for {ProductShortName}].
 * {ProductShortname} is running.
 
 .Procedure
 
-. Navigate to the application root directory.
-+
-The application root directory contains the `pom.xml` configuration file.
-
+. Navigate to the _<application_home>_ directory.
 
 . Add the following build configuration to the `pom.xml` configuration file in the `<project>` section to define the application archive filename.
 +
@@ -40,9 +39,9 @@ $ mvn package wildfly:deploy
 
 .Verification
 
-* To access the application, navigate to the address `http://localhost:8080/{helloworld-QS-artifactId}/` in a browser.
+* To access the application, navigate to the address `http://localhost:8080/_<project_name>_` in a browser.
 +
-You are redirected to http://localhost:8080/{helloworld-QS-artifactId}/HelloWorld and you get the following message:
+You are redirected to the URL you configured in your applications' `index.html` file, and you get the following message:
 +
 ----
 Hello World!

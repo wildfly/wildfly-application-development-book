@@ -1,4 +1,4 @@
-package org.jboss.as.quickstarts.helloworld;
+package org.jboss.as.quickstarts.__<project_name>__;
 
 import java.io.IOException;
 import java.io.PrintWriter;

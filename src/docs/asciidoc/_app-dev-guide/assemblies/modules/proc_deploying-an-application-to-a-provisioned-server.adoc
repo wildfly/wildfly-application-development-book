@@ -8,17 +8,17 @@
 [role="_abstract"]
 You can package the application with a provisioned server.
 
+include::fragments/frag_application-home-info.adoc[]
+
 .Prerequisites
 
 * You have created an application.
 +
-For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet].
+For more information, see xref:developing-a-hello-world-servlet-application_default[Developing applications for {ProductShortName}].
 
 .Procedure
 
-. Navigate to the application root directory.
-+
-The application root directory contains the `pom.xml` configuration file.
+. Navigate to the _<application_home>_ directory.
 
 . Create a profile "provisioned-server" in the `pom.xml` configuration file.
 +
@@ -74,7 +74,7 @@ In the log, you see that the application has been deployed as `ROOT.war`
 
 . To access the application, navigate to the address `http://localhost:8080/` in a browser.
 +
-You are redirected to http://localhost:8080/HelloWorld and you get the following message:
+You are redirected to the URL you configured in your applications' `index.html` file, and you get the following message:
 +
 ----
 Hello World!

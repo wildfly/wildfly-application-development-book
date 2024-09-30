@@ -1,0 +1,1 @@
+In this procedure, __<application_home>__ refers to the directory that contains the `pom.xml` configuration file for the application. Also, __<application_home>__ is the same as the __<project_name>__ that you used when creating the Maven project.

@@ -8,6 +8,8 @@
 [role="_abstract"]
 Test the application deployed to {ProductShortname} on {cloudPlatform}.
 
+include::fragments/frag_application-home-info.adoc[]
+
 .Prerequisites
 
 * You have created a test class.
@@ -21,9 +23,9 @@ For more information, see xref:creating-a-test-class-to-test-an-application_test
 . Navigate to the _<application_home>_ directory.
 . Run the test by using the `verify` command, activating the `integration-testing` profile and specifying the URL to the application.
 +
-[source,options="nowrap",subs=attributes+]
+[source,options="nowrap",subs="attributes+,+quotes"]
 ----
-$ mvn verify -Pintegration-testing -Dserver.host=https://$(oc get route {helm-app-name} --template='{{ .spec.host }}')
+$ mvn verify -Pintegration-testing -Dserver.host=https://$(oc get route __<project_name>__ --template='{{ .spec.host }}')
 ----
 +
 .Example output

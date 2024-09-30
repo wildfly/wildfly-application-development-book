@@ -1,23 +1,21 @@
-//include::../attributes.adoc[]
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-09-27
 
-ifdef::context[:parent-context-of-deploying-an-application-to-the-server: {context}]
+ifdef::context[:parent-context-of-building-and-deploying-a-servlet-application: {context}]
 
-:_content-type: ASSEMBLY
+:_mod-docs-content-type: ASSEMBLY
 
 ifndef::context[]
-[id="deploying-an-application-to-the-server"]
+[id="building-and-deploying-a-servlet-application"]
 endif::[]
 ifdef::context[]
-[id="deploying-an-application-to-the-server_{context}"]
+[id="building-and-deploying-a-servlet-application_{context}"]
 endif::[]
-= Building and deploying an application to the server
+= Building and deploying a servlet application
 
-:context: deploying-an-application-to-the-server
+:context: building-and-deploying-a-servlet-application
 
-[role="_abstract"]
-You can deploy your application on a {ProductShortName} server running on bare metal or on {cloudPlatform}.
-
-//include::assembly_building-and-deploying-a-servlet-application.adoc[leveloffset=+1]
+////
 
 You can deploy your application on a {ProductShortName} server running on bare metal or on {cloudPlatform}.
 
@@ -40,6 +38,8 @@ include::{pathToModules}/proc_deploying-an-application-to-a-provisioned-server.a
 
 include::assembly_deploying-an-application-to-cloudplatform.adoc[leveloffset=+1]
 
-ifdef::parent-context-of-deploying-an-application-to-the-server[:context: {parent-context-of-deploying-an-application-to-the-server}]
-ifndef::parent-context-of-deploying-an-application-to-the-server[:!context:]
+////
+
+ifdef::parent-context-of-building-and-deploying-a-servlet-application[:context: {parent-context-of-building-and-deploying-a-servlet-application}]
+ifndef::parent-context-of-building-and-deploying-a-servlet-application[:!context:]
 

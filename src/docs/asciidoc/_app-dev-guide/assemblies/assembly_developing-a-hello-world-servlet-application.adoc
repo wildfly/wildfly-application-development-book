@@ -1,0 +1,34 @@
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-09-25
+
+ifdef::context[:parent-context-of-developing-a-hello-world-servlet-application: {context}]
+
+:_mod-docs-content-type: ASSEMBLY
+
+ifndef::context[]
+[id="developing-a-hello-world-servlet-application"]
+endif::[]
+ifdef::context[]
+[id="developing-a-hello-world-servlet-application_{context}"]
+endif::[]
+= Developing applications for {ProductShortName}
+
+:context: developing-a-hello-world-servlet-application
+
+The following procedures demonstrates creating applications that use different {JEEE} APIs.
+
+:applicationHome: helloworld
+include::modules/proc_creating-a-hello-world-servlet.adoc[leveloffset=+1]
+
+:applicationHome: helloworldrs
+:urlFor: rest
+include::modules/proc_creating-a-hello-world-rest-service.adoc[leveloffset=+1]
+
+
+//include::assembly_deploying-an-application-to-the-server.adoc[leveloffset=+1]
+
+//include::assembly_testing-an-application-deployed-to-server.adoc[leveloffset=+1]
+
+ifdef::parent-context-of-developing-a-hello-world-servlet-application[:context: {parent-context-of-developing-a-hello-world-servlet-application}]
+ifndef::parent-context-of-developing-a-hello-world-servlet-application[:!context:]
+

@@ -48,4 +48,4 @@ You get an output similar to the following:
 [role="_additional-resources"]
 .Next steps
 
-* xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet]
+* xref:developing-a-hello-world-servlet-application_default[Developing applications for {ProductShortName}]

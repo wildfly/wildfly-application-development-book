@@ -12,7 +12,7 @@ To create integration tests for your applications, add the required Maven depend
 
 * You have created a Maven project.
 +
-For more information, see xref:creating-a-maven-project-for-a-hello-world-application_default[Creating a Maven project for a Hello World application].
+For more information, see xref:creating-a-maven-project-with-the-webapp-maven-archetype_creating-a-maven-project-for-a-hello-world-application[Creating a Maven project with `maven-archetype-webapp`].
 
 .Procedure
 
@@ -45,7 +45,7 @@ For more information, see xref:creating-a-maven-project-for-a-hello-world-applic
 
 . Define a profile to add the plug-ins required for integration tests.
 +
-[source,xml,options="nowrap"]
+[source,xml,options="nowrap",subs=+quotes]
 ----
 <project>
     ...
@@ -61,7 +61,7 @@ For more information, see xref:creating-a-maven-project-for-a-hello-world-applic
                         <version>${version.plugin.failsafe}</version>
                         <configuration>
                             <includes>
-                                <include>**/HelloWorldServletIT</include>       <!--2-->
+                                <include>**/__{test_class_name}__</include>       <!--2-->
                             </includes>
                         </configuration>
                         <executions>
@@ -80,7 +80,7 @@ For more information, see xref:creating-a-maven-project-for-a-hello-world-applic
 </project>
 ----
 <1> Maven plug-in for running integration tests.
-<2> The name of the Java class that tests the application.
+<2> Replace __{test_class_name}__ with the name of the Java class that tests the application.
 
 [role="_additional-resources"]
 .Next steps

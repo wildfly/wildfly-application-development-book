@@ -8,6 +8,6 @@
     <artifactId>helloworld</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>helloworld Maven Webapp</name>
+    <name>__{project_name}__ Maven Webapp</name>
   
 </project>

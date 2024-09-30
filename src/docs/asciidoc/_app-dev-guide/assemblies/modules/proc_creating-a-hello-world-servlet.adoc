@@ -8,12 +8,12 @@
 [role="_abstract"]
 Create a servlet that returns "Hello world!" when accessed.
 
-In this procedure, __<application_home>__ refers to the directory that contains the `pom.xml` configuration file for the application.
+include::fragments/frag_application-home-info.adoc[]
 
 .Prerequisites
 * You have created a Maven project.
 +
-For more information, see xref:creating-a-maven-project-for-a-hello-world-application_default[Creating a Maven project for a Hello World application].
+For more information, see xref:creating-a-maven-project-for-a-hello-world-application_default[Creating a Maven project for a {ProductShortName} application].
 
 .Procedure
 
@@ -35,11 +35,7 @@ For more information, see xref:creating-a-maven-project-for-a-hello-world-applic
 <1> `jakarta.servlet-api` dependency provides Jakarta Servlet API.
 <2> Define the scope as `provided` so that the dependency is not included in the application. The reason for not including the dependency in the application is that this dependency is managed by the `{JBossBOMWithTools}` BOM and such dependencies are included with {ProductShortName}.
 +
-[NOTE]
-====
-The dependency is defined without a version because `{JBossBOMWithTools}` BOM was imported in the `<dependencyManagement>` section.
-====
-
+include::fragments/frag_note-bom-import-version.adoc[]
 +
 include::fragments/frag_creating-simple-web-application-common.adoc[]
 
@@ -54,41 +50,12 @@ include::sources/HelloWorldServlet.java[]
 ** This class is a servlet.
 ** Make the servlet available at the URL "_<application_URL>_/HelloWorld".
 +
-For example, if {ProductShortname} is running on the localhost and is available at the default HTTP port, 8080, the URL is `http://localhost:8080/helloworld/HelloWorld`.
+For example, if {ProductShortname} is running on the localhost and is available at the default HTTP port, 8080, the URL is `http://localhost:8080/_<project_name>_/HelloWorld`.
 
-. Navigate to the __<application_home>__/src/main/webapp directory.
 +
-You find the file "index.jsp" that Maven created. This file prints "Hello World!" when you access the application.
-
-. Update the "index.jsp" file to redirect to the Hello World servlet by replacing its content with the following content:
+:urlFor: servlet
 +
-[source,options="nowrap"]
-----
-<html>
-    <head>
-        <meta http-equiv="Refresh" content="0; URL=HelloWorld">
-    </head>
-</html>
-----
-
-. Navigate to the __<application_home>__ directory.
-
-. Compile and package the application as a web archive (WAR) with the following command:
-+
-[source,options="nowrap"]
-----
-$ mvn package
-----
-+
-.Example output
-[source,options="nowrap"]
-----
-...
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-...
-----
+include::fragments/frag_creating-simple-web-application-indexjsp.adoc[]
 
 [role="_additional-resources"]
 .Next steps

@@ -2,6 +2,9 @@ include::_app-dev-guide/attributes.adoc[]
 
 :appication_development:
 
+:toc:
+:numbered:
+
 = {GettingStartedDevelopingApplications}
 
 This guide covers how to develop, from scratch, test, and deploy applications on {ProductShortName}. If you are already familiar with some areas, use the table of contents to jump ahead.
@@ -10,9 +13,11 @@ This guide covers how to develop, from scratch, test, and deploy applications on
 
 include::_app-dev-guide/assemblies/assembly_creating-a-maven-project-for-a-hello-world-application.adoc[leveloffset=+1]
 
-include::_app-dev-guide/assemblies/modules/proc_creating-a-hello-world-servlet.adoc[leveloffset=+1]
+include::_app-dev-guide/assemblies/assembly_developing-a-hello-world-servlet-application.adoc[leveloffset=+1]
 
 include::_app-dev-guide/assemblies/assembly_deploying-an-application-to-the-server.adoc[leveloffset=+1]
 
 include::_app-dev-guide/assemblies/assembly_testing-an-application-deployed-to-server.adoc[leveloffset=+1]
+
+//include::_app-dev-guide/assemblies/assembly_developing-a-hello-world-restful-service-application.adoc[leveloffset=+1]
 

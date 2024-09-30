@@ -11,14 +11,14 @@ endif::[]
 ifdef::context[]
 [id="creating-a-maven-project-for-a-hello-world-application_{context}"]
 endif::[]
-= Creating a Maven project for a Hello World application
+= Creating a Maven project for {ProductShortName} applications
 
 :context: creating-a-maven-project-for-a-hello-world-application
 
 [role="_abstract"]
 A Maven project contains a `pom.xml` configuration file and has the directory structure required for creating an application. You can configure the `pom.xml` configuration file to add dependencies for your application.
 
-To create a Maven project for a Hello World application, follow these procedures:
+To create a Maven project for a {ProductShortName} application, follow these procedures:
 
 * xref:creating-a-maven-project-with-the-webapp-maven-archetype_creating-a-maven-project-for-a-hello-world-application[Creating a Maven project with `maven-archetype-webapp`]
 * xref:defining-properties-in-a-maven-project_creating-a-maven-project-for-a-hello-world-application[Defining properties in a Maven project]

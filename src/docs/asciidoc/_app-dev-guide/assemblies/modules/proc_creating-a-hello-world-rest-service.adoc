@@ -1,0 +1,72 @@
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-09-24
+:_mod-docs-content-type: PROCEDURE
+
+[id="creating-a-hello-world-rest-service_{context}"]
+= Creating a Hello World REST service
+
+Create a Jakarta RESTful Web Service that returns "Hello world!" when accessed.
+
+include::fragments/frag_application-home-info.adoc[]
+
+.Prerequisites
+
+* You have created a Maven project.
++
+For more information, see xref:creating-a-maven-project-for-a-hello-world-application_default[Creating a Maven project for a {ProductShortName} application].
+
+.Procedure
+
+. Add the required dependency to `pom.xml` configuration file after the `<dependencyManagement>` section.
++
+[source,xml,options="nowrap"]
+----
+<project>
+    ...
+    <dependencies>
+         <dependency>                                  <!--1-->
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
+            <scope>provided</scope>                    <!--2-->
+        </dependency>
+    </dependencies>
+</project>
+----
+<1> `jakarta.ws.rs` dependency provides Jakarta RESTful Web Services API.
+<2> Define the scope as `provided` so that the dependency is not included in the application. The reason for not including the dependency in the application is that this dependency is managed by the `{JBossBOMWithTools}` BOM and such dependencies are included with {ProductShortName}.
++
+include::fragments/frag_note-bom-import-version.adoc[]
++
+include::fragments/frag_creating-simple-web-application-common.adoc[]
+
+. Create an Java class `JakartaRESTActivator.java` that extends the `jakarta.ws.rs.core.Application` class. 
++
+The reason for extending the `jakarta.ws.rs.core.Application` class is that to define the base URI for your service, you must define the path by using the `@ApplicationPath` annotation, which can only be applied to a subclass of the `jakarta.ws.rs.core.Application` class. 
++
+[source,java,subs=+quotes]
+----
+include::sources/JakartaRESTActivator.java[]
+----
+<1> Define the base URI for your REST resources. For example, if {ProductShortname} is running on the localhost and is available at the default HTTP port, 8080, the base URI is `http://localhost:8080/_<project_name>_/rest/`.
+
+
+. Create a Java class `HelloWorld.java` that returns "Hello World!".
++
+[source,java,options="nowrap",subs=+quotes]
+----
+include::sources/HelloWorldRS.java[]
+----
+<1> Declare the class to be available at the application's root URL.
+<2> Use the `@Get` annotation to designate the method for processing HTTP GET requests.
+<3> Declare the method to be available at the URL "/HelloWorld" relative to the base URL. In the previous step, the base URI was configured as "rest". Therefore, if {ProductShortname} is running on the localhost and is available at the default HTTP port, 8080, the base URL for this resource is `http://localhost:8080/_<project_name>_/rest/HelloWorld`.
+<4> specify the MIME media types of representations this method can produce.
+
++
+:urlFor: rest
++
+include::fragments/frag_creating-simple-web-application-indexjsp.adoc[]
+
+[role="_additional-resources"]
+.Next steps
+
+* xref:deploying-an-application-to-the-server_default[Deploying an application to the server]
