@@ -1,0 +1,42 @@
+ifdef::context[:parent-context-of-deploying-a-restful-application-to-the-server: {context}]
+
+:_content-type: ASSEMBLY
+
+ifndef::context[]
+[id="deploying-a-restful-application-to-the-server"]
+:pathToModules: modules
+endif::[]
+ifdef::context[]
+[id="deploying-a-restful-application-to-the-server_{context}"]
+endif::[]
+= Building and deploying a RESTful application to the server
+
+:context: deploying-an-application-to-the-server
+
+[role="_abstract"]
+You can deploy your application on a {ProductShortName} server running on bare metal or on {cloudPlatform}.
+
+To deploy your application on a {ProductShortName} server running on bare metal, follow this procedure:
+
+* xref:building-and-deploying-a-restful-application-to-a-bare-metal-installation_deploying-an-application-to-the-server[Building and deploying a RESTful application to a bare metal installation]
+
+To deploy your application on a provisioned {ProductShortName} server, follow this procedure:
+
+* xref:building-and-deploying-a-restful-application-on-a-provisioned-server_deploying-an-application-to-the-server[Building and deploying a RESTful application on a provisioned server]
+
+To deploy your application on a {ProductShortName} server running on {cloudPlatform}, follow this procedures:
+
+* xref:deploying-a-restful-application-to-cloudplatform_deploying-an-application-to-the-server[Building and deploying a RESTful application to {cloudPlatform}]
+
+include::{pathToModules}/proc_building-and-deploying-a-restful-application-to-a-bare-metal-installation.adoc[leveloffset=+1]
+
+include::{pathToModules}/proc_building-and-deploying-a-restful-application-on-a-provisioned-server.adoc[leveloffset=+1]
+
+include::assembly_deploying-a-restful-application-to-cloudplatform.adoc[leveloffset=+1]
+
+
+//include::con_application-deployment-options.adoc[leveloffset=+1]
+
+ifdef::parent-context-of-deploying-a-restful-application-to-the-server[:context: {parent-context-of-deploying-an-application-to-the-server}]
+ifndef::parent-context-of-deploying-a-restful-application-to-the-server[:!context:]
+

@@ -1,0 +1,13 @@
+* The application to test is deployed on {ProductShortName}.
+* {ProductShortName} is running.
+
+.Procedure
+
+. Navigate to the _<application_home>_ directory.
+
+. Run the integration test by using the `verify` command with the `integration-testing` profile.
++
+[source,options="nowrap"]
+----
+$ mvn verify -Pintegration-testing
+----

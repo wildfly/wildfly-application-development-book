@@ -1,0 +1,87 @@
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-10-29
+:_mod-docs-content-type: PROCEDURE
+
+[id="creating-a-test-class-to-test-the-hello-world-restful-service_{context}"]
+= Creating a test class to test the hello world RESTful service
+
+Create an integration test that verifies that the hello world RESTful service retuns the string "Hello World!".
+
+In this procedure, _<application_home>_ refers to the directory that contains the `pom.xml` configuration file for the application.
+
+.Prerequisites
+
+* You have deployed your RESTful application on {ProductShortname}.
++
+For more information, see xref:deploying-a-restful-application-to-the-server_developing-a-hello-world-restful-service-application[Building and deploying an application to the server].
+
+* You have added the Maven dependencies required for tests.
++
+For more information, see xref:adding-the-maven-dependencies-required-for-junit-tests-rs_testing-an-application-deployed-to-server[Adding the Maven dependencies and profile required for integration tests].
+
+
+.Procedure
+
+. Add the required dependencies.
++
+[source,xml,options="nowrap"]
+----
+ <dependencies>
+ ...
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-client</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- resteasy client needs commons-logging yet the server uses this instead,
+            to be fully compatible on apps we need to add this dependency whenever commons-logging is needed,
+            but on testing clients like this we could use commons-logging instead -->
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>commons-logging-jboss-logging</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-json-p-provider</artifactId>
+            <scope>test</scope>
+        </dependency>
+       <!-- Required by the resteasy-json-p-provider -->
+        <dependency>
+            <groupId>org.eclipse.parsson</groupId>
+            <artifactId>parsson</artifactId>
+            <scope>test</scope>
+        </dependency>
+ </dependencies>
+----
+ 
+. Create a directory to store the test class.
++
+[source,options="nowrap"subs=+quotes]
+----
+$ mkdir -p __<application_home>__/src/test/java/org/jboss/as/quickstarts/helloworld/rest
+----
+
+. Navigate to the new directory.
++
+[source,options="nowrap"]
+----
+$ cd src/test/java/org/jboss/as/quickstarts/helloworld/rest
+----
+
+. Create a Java class `{testClass}` that tests the deployment.
++
+[source,java,options="nowrap"]
+----
+include::sources/RESTEndPointIT.java[]
+----
+
+[role="_additional-resources"]
+.Next steps
+
+Depending your deployment, follow the appropriate link from the list below to test the application:
+
+* xref:testing-a-restful-application-deployed-on-wildfly-that-is-running-on-bare-metal_testing-an-application-deployed-to-server[Testing a RESTful application deployed on {ProductShortName} that is running on bare metal]
+* xref:testing-a-restful-application-deployed-on-a-provisioned-server_testing-an-application-deployed-to-server[Testing a RESTFul application deployed on a provisioned server]
+* xref:testing-a-restful-application-deployed-to-server-on-cloudplatform_testing-an-application-deployed-to-server[Testing a RESTful application deployed to {ProductShortName} on OpenShift]
+

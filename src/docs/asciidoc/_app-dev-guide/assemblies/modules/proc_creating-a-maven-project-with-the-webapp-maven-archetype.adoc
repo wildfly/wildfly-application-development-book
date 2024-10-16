@@ -17,6 +17,11 @@ Use the `maven-archetype-webapp` archetype to create a Maven project for buildin
 
 . Set up a Maven project by using the `mvn` command. The command creates the directory structure for the project and the `pom.xml` configuration file.
 +
+[NOTE]
+====
+If you are not creating your first application, instead you are creating an application based on other examples in the guide, use the appropriate value for `artifactId` in the `mvn` command below. The correct value is mentioned in the "Prerequisites" section of each application-specific procedure. Alternatively, you can refer to xref:todo[artifact id to use for applications].
+====
++
 [source,options="nowrap",subs="attributes+"]
 ----
 include::sources/maven-generate-command.txt[]
@@ -28,11 +33,6 @@ include::sources/maven-generate-command.txt[]
 <5> Tell Maven to use the supplied parameters rather than starting interactive mode.
 
 . Navigate to the generated directory.
-+
-[source,options="nowrap",subs="attributes+"]
-----
-$ cd {helloworld-QS-artifactId}
-----
 
 . Open the generated `pom.xml` configuration file in a text editor.
 
@@ -40,12 +40,18 @@ $ cd {helloworld-QS-artifactId}
 +
 Ensure that the file looks like this:
 +
+.Example
 [source,xml,options="nowrap"]
 ----
 include::sources/initial-pom.xml[]
 ----
 +
 The content was removed because it is not required for the application.
++
+[IMPORTANT]
+====
+Do not change the original `artifactId` value in the generated file. This value comes from the `mvn archetype:generate` command.
+====
 
 [role="_additional-resources"]
 .Next steps

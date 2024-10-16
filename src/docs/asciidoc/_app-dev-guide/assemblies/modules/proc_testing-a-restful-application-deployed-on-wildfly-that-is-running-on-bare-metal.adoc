@@ -1,9 +1,9 @@
-:_newdoc-version: 2.15.0
-:_template-generated: 2023-11-6
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-11-04
 :_mod-docs-content-type: PROCEDURE
 
-[id="testing-an-application-deployed-to-server-running-on-bare-metal_{context}"]
-= Testing an application deployed on {ProductShortname} that is running on bare metal
+[id="testing-a-restful-application-deployed-on-wildfly-that-is-running-on-bare-metal_{context}"]
+= Testing a RESTful application deployed on WildFly that is running on bare metal
 
 [role="_abstract"]
 Test the application deployed on {ProductShortname} that is running on bare metal.
@@ -12,7 +12,7 @@ Test the application deployed on {ProductShortname} that is running on bare meta
 
 * You have created a test class.
 +
-For more information, see xref:creating-a-test-class-to-test-an-application_testing-an-application-deployed-to-server[Creating a test class to test an application].
+For more information, see xref:creating-a-test-class-to-test-the-hello-world-restful-service_testing-an-application-deployed-to-server[Creating a test class to test the hello world RESTful service].
 
 include::fragments/frag_testing-application-baremetal-common.adoc[]
 +
@@ -30,3 +30,4 @@ include::fragments/frag_testing-application-baremetal-common.adoc[]
 [INFO] Finished at: 2023-11-22T14:53:54+05:30
 [INFO] ------------------------------------------------------------------------
 ----
+

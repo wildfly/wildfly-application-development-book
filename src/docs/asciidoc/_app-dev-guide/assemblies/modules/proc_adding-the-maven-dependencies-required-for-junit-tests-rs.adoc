@@ -2,7 +2,7 @@
 :_template-generated: 2023-11-6
 :_mod-docs-content-type: PROCEDURE
 
-[id="adding-the-maven-dependencies-required-for-junit-tests_{context}"]
+[id="adding-the-maven-dependencies-required-for-junit-tests-rs_{context}"]
 = Adding the Maven dependencies and profile required for integration tests
 
 include::fragments/frag_maven-dependencies-and-profile-integration tests.adoc[]
@@ -10,4 +10,5 @@ include::fragments/frag_maven-dependencies-and-profile-integration tests.adoc[]
 [role="_additional-resources"]
 .Next steps
 
-* xref:creating-a-test-class-to-test-an-application_testing-an-application-deployed-to-server[Creating a test class to test an application]
+* xref:creating-a-test-class-to-test-the-hello-world-restful-service_testing-an-application-deployed-to-server[Creating a test class to test the hello world RESTful service]
+

@@ -11,32 +11,8 @@ You can deploy an application to {ProductShortname} by using the {ProductShortna
 * You have created an application.
 +
 For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet].
-* {ProductShortname} is running.
 
-.Procedure
-
-. Navigate to the application root directory.
-+
-The application root directory contains the `pom.xml` configuration file.
-
-
-. Add the following build configuration to the `pom.xml` configuration file in the `<project>` section to define the application archive filename.
-+
-[source,xml,options="nowrap"]
-----
-<build>
-    ...
-    <finalName>${project.artifactId}</finalName>        <!--1-->
-</build>
-----
-<1> Set the name of the deployment to the project's artifact ID.
-
-. Build and deploy the application by using the {ProductShortName} deploy plug-in.
-+
-[source,options="nowrap"]
-----
-$ mvn package wildfly:deploy
-----
+include::fragments/frag_building-and-deploying-to-baremetal-common.adoc[]
 
 .Verification
 

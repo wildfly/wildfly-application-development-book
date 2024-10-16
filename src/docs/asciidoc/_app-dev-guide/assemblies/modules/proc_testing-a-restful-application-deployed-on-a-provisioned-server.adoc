@@ -1,0 +1,35 @@
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-11-04
+:_mod-docs-content-type: PROCEDURE
+
+[id="testing-a-restful-application-deployed-on-a-provisioned-server_{context}"]
+= Testing a RESTFul application deployed on a provisioned server
+
+Test an application deployed on a provisioned server.
+
+.Prerequisites
+
+* You have deployed an application to a provisioned server.
++
+For more information, see xref:creating-a-test-class-to-test-the-hello-world-restful-service_testing-an-application-deployed-to-server[Creating a test class to test the hello world RESTful service].
+
+include::fragments/frag_testing-application-provisioned-server-common.adoc[]
++
+.Example output
+----
+[INFO] Running org.wildfly.quickstarts.rshelloworld.RESTEndPointIT
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.436 s -- in org.wildfly.quickstarts.rshelloworld.RESTEndPointIT
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- failsafe:3.2.2:verify (default) @ helloworld-rs ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.646 s
+[INFO] Finished at: 2024-11-12T00:13:23+05:30
+[INFO] ------------------------------------------------------------------------
+----

@@ -1,23 +1,24 @@
-:_newdoc-version: 2.15.0
-:_template-generated: 2023-10-16
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-11-04
 :_mod-docs-content-type: PROCEDURE
 
-[id="preparing-an-application-for-deployment-on-openshift_{context}"]
-= Preparing an application for deployment on {cloudPlatform}
+[id="preparing-a-restful-application-for-deployment-on-cloudplatform_{context}"]
+= Preparing a RESTFul application for deployment on cloudPlatform
 
-[role="_abstract"]
 {cloudPlatform} uses application hosted on a Git repository. To deploy your application on OpenShift, you must first push your application to a Git repository. After that, you can use {ProductShortname} helm chart to configure your application deployment.
 
 .Prerequisites
 
 * You have created an application.
 +
-For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet].
+For more information, see xref:creating-a-hello-world-rest-service_developing-a-hello-world-restful-service-application[Creating a Hello World REST service].
 * You have created a Git repository.
 
 include::fragments/frag_preparing-an-application-for-cloudplatform-common.adoc[]
 
+////
 [role="_additional-resources"]
 .Next steps
 
 * xref:deploying-an-application-to-server-on-openshift-with-helm_deploying-an-application-to-cloudplatform[Deploying an application to {ProductShortname} on OpenShift with Helm]
+////

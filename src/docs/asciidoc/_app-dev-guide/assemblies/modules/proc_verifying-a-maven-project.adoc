@@ -47,5 +47,7 @@ You get an output similar to the following:
 
 [role="_additional-resources"]
 .Next steps
+Follow the appropriate link below to find instructions about creating applications depending on the application you are creating:
 
-* xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet]
+* xref:creating-a-hello-world-servlet_default[Creating a Hello World Servlet]
+* xref:creating-a-hello-world-rest-service_developing-a-hello-world-restful-service-application[Creating a Hello World REST service]

@@ -6,6 +6,7 @@ ifdef::context[:parent-context-of-deploying-an-application-to-cloudplatform: {co
 :_mod-docs-content-type: ASSEMBLY
 
 ifndef::context[]
+:pathToModules: modules
 [id="deploying-an-application-to-cloudplatform"]
 endif::[]
 ifdef::context[]

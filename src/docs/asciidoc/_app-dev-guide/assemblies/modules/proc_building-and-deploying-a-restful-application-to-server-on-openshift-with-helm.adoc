@@ -1,29 +1,32 @@
-:_newdoc-version: 2.15.0
-:_template-generated: 2023-10-16
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-11-04
 :_mod-docs-content-type: PROCEDURE
 
-[id="deploying-an-application-to-server-on-openshift-with-helm_{context}"]
-= Building and deploying an application to {ProductShortname} on OpenShift with Helm
+[id="building-and-deploying-a-restful-application-to-server-on-openshift-with-helm_{context}"]
+= Building and deploying a RESTful application to server on OpenShift with Helm
 
-[role="_abstract"]
 Use the {ProductShortname} Helm chart to configure and deploy application to {ProductShortname} on OpenShift with Helm.
 
 .Prerequisites
 
 * You have prepared your application for deployment on {cloudPlatform}.
 +
+////
 For more information, see xref:preparing-an-application-for-deployment-on-openshift_deploying-an-application-to-cloudplatform[Preparing an application for deployment on OpenShift Container Platform].
+////
 
 include::fragments/frag_deploying-application-to-server-cloudplatform-common.adoc[]
 
 . To access the application, navigate to the Application URL of the deployment in a browser.
 +
-You are redirected to the servlet at path "/HelloWorld" and you get the following message:
+You are redirected to the servlet at path "/rest/HelloWorld" and you get the following message:
 +
 ----
 Hello World!
 ----
 
+////
 [role="_additional-resources"]
 .Next steps
 * xref:testing-an-application-deployed-to-server_default[Testing an application deployed on {ProductShortName}]
+////
