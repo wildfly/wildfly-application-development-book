@@ -1,0 +1,41 @@
+. Navigate to the __<application_home>__/src/main/webapp directory.
++
+You find the file "index.jsp" that Maven created. This file prints "Hello World!" when you access the application.
+
+. Update the "index.jsp" file to redirect to the application URL by replacing its content with the following content:
++
+ifeval::["{urlFor}" == "servlet"]
+:url: HelloWorld
+endif::[]
+
+ifeval::["{urlFor}" == "rest"]
+:url: rest/HelloWorld
+endif::[]
+[source,html,options="nowrap",subs="attributes+,+quotes"]
+----
+<html>
+    <head>
+        <meta http-equiv="Refresh" content="0; URL={url}">
+    </head>
+</html>
+----
+
+. Rename the file to `index.html`.
+. Navigate to the __<application_home>__ directory.
+
+. Compile and package the application as a web archive (WAR) with the following command:
++
+[source,options="nowrap"]
+----
+$ mvn package
+----
++
+.Example output
+[source,options="nowrap"]
+----
+...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+...
+----

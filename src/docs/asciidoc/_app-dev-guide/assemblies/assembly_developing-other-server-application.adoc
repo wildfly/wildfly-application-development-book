@@ -1,0 +1,22 @@
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-10-14
+
+ifdef::context[:parent-context-of-developing-other-server-application: {context}]
+
+:_mod-docs-content-type: ASSEMBLY
+
+ifndef::context[]
+[id="developing-other-server-application"]
+endif::[]
+ifdef::context[]
+[id="developing-other-server-application_{context}"]
+endif::[]
+= Developing other {ProductShortName} application
+
+:context: developing-other-server-application
+
+include::assembly_developing-a-hello-world-restful-service-application.adoc[leveloffset=+1]
+
+ifdef::parent-context-of-developing-other-server-application[:context: {parent-context-of-developing-other-server-application}]
+ifndef::parent-context-of-developing-other-server-application[:!context:]
+

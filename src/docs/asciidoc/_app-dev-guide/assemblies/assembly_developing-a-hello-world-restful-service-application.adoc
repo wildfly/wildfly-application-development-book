@@ -1,0 +1,38 @@
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-09-25
+
+ifdef::context[:parent-context-of-developing-a-hello-world-restful-service-application: {context}]
+
+:_mod-docs-content-type: ASSEMBLY
+
+ifndef::context[]
+[id="developing-a-hello-world-restful-service-application"]
+:pathToModules: modules
+endif::[]
+ifdef::context[]
+[id="developing-a-hello-world-restful-service-application_{context}"]
+endif::[]
+= Developing a hello world RESTful service application
+
+:context: developing-a-hello-world-restful-service-application
+
+In the following examples, the artifactID used is `helloworld-rs`.
+
+:applicationHome: helloworld-rs
+:helloworld-QS-path: rshelloworld
+
+
+:artifactID: helloworld-rs
+:package: {packageCommon}.helloworld.rest
+:mainClassPath: {mainClassPathCommon}/helloworld/rest
+:testClass: RESTEndPointIT.java
+
+include::{pathToModules}/proc_creating-a-hello-world-rest-service.adoc[leveloffset=+1]
+
+include::assembly_deploying-a-restful-application-to-the-server.adoc[leveloffset=+1]
+
+include::assembly_testing-a-restful-application-deployed-to-server.adoc[leveloffset=+1]
+
+ifdef::parent-context-of-developing-a-hello-world-restful-service-application[:context: {parent-context-of-developing-a-hello-world-restful-service-application}]
+ifndef::parent-context-of-developing-a-hello-world-restful-service-application[:!context:]
+

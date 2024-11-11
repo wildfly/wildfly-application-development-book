@@ -1,5 +1,3 @@
-include::../attributes.adoc[]
-
 ifdef::context[:parent-context-of-deploying-an-application-to-the-server: {context}]
 
 :_content-type: ASSEMBLY

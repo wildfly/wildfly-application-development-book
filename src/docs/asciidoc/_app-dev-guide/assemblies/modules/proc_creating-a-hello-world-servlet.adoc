@@ -3,12 +3,12 @@
 :_mod-docs-content-type: PROCEDURE
 
 [id="creating-a-hello-world-servlet_{context}"]
-= Creating a Hello World servlet
+= Creating a Hello World servlet application
 
 [role="_abstract"]
-Create a servlet that returns "Hello world!" when accessed.
+Create a servlet application that returns "Hello world!" when accessed.
 
-In this procedure, __<application_home>__ refers to the directory that contains the `pom.xml` configuration file for the application.
+include::fragments/frag_application-home-info.adoc[]
 
 .Prerequisites
 * You have created a Maven project.

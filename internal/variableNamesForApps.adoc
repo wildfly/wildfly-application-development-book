@@ -1,0 +1,26 @@
+[options="header"]
+|===
+|Application   |artifactID   |main class path   |package   |URL   |test class
+//-------------------------------------------------
+
+//Row1
+|HelloWorld Servlet
+|helloworld
+|helloworld
+|helloworld
+|helloworld
+|
+
+//Row2
+|HelloWorld REST
+|helloworld-rs
+|helloworld/rest
+|helloworld.rest
+|rest/helloworld
+|RESTEndPointIT.java
+
+//Row3
+|Row3A   |Row3B   |Row3C   |Row3D   |Row3E   |Row3F   
+//Row4
+|Row4A   |Row4B   |Row4C   |Row4D   |Row4E   |Row4F   
+|===

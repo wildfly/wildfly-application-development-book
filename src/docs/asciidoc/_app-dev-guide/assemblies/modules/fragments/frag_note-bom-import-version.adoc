@@ -1,0 +1,4 @@
+[NOTE]
+====
+The dependency is defined without a version because `{JBossBOMWithTools}` BOM was imported in the `<dependencyManagement>` section.
+====

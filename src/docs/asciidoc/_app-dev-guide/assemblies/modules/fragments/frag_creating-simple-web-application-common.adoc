@@ -1,8 +1,7 @@
 ////
 This is a common file shared between docs.
 
-The value for QS-path is set in the Quickstart procedure
-that includes this file.
+The value for applicationHome needs to be set in top-level assembly of an application.
 ////
 . Navigate to the __<application_home>__ directory.
 
@@ -10,13 +9,13 @@ that includes this file.
 +
 [source,options="nowrap",subs=attributes+]
 ----
-$ mkdir -p src/main/java/{helloworld-QS-path}
+$ mkdir -p src/main/java/{mainClassPath}
 ----
 
 . Navigate to the new directory.
 +
 [source,options="nowrap",subs=attributes+]
 ----
-$ cd src/main/java/{helloworld-QS-path}
+$ cd src/main/java/{mainClassPath}
 ----
 

@@ -1,11 +1,10 @@
-:_newdoc-version: 2.15.0
-:_template-generated: 2023-11-29
+:_newdoc-version: 2.18.2
+:_template-generated: 2024-11-04
 :_mod-docs-content-type: PROCEDURE
 
-[id="deploying-an-application-to-a-provisioned-server_{context}"]
-= Building and deploying an application on a provisioned server
+[id="building-and-deploying-a-restful-application-on-a-provisioned-server_{context}"]
+= Building and deploying a RESTful application on a provisioned server
 
-[role="_abstract"]
 You can package the application with a provisioned server.
 
 include::fragments/frag_application-home-info.adoc[]
@@ -14,7 +13,7 @@ include::fragments/frag_application-home-info.adoc[]
 
 * You have created an application.
 +
-For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet].
+For more information, see xref:creating-a-hello-world-rest-service_developing-a-hello-world-restful-service-application[Creating a Hello World REST service].
 
 include::fragments/frag_building-and-deploying-to-provisioned-server-common.adoc[]
 
@@ -42,9 +41,7 @@ In the log, you see that the application has been deployed as `ROOT.war`
 ...
 ----
 
-. To access the application, navigate to the address `http://localhost:8080/` in a browser.
-+
-You are redirected to http://localhost:8080/HelloWorld and you get the following message:
+. To access the application, navigate to the address `http://localhost:8080/rest/HelloWorld`. You get the following message:
 +
 ----
 Hello World!
@@ -52,4 +49,4 @@ Hello World!
 
 [role="_additional-resources"]
 .Next steps
-* xref:testing-an-application-deployed-to-server_default[Testing an application deployed on {ProductShortName}]
+* xref:testing-a-restful-application-deployed-to-server_default[Testing a RESTful application deployed on {ProductShortName}]

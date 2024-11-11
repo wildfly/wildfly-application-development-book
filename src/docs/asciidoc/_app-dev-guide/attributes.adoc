@@ -49,3 +49,15 @@
 :helm-app-name: helloworld
 
 :pathToModules: modules
+
+
+
+////
+New attributes, delete others when these are finalized
+////
+
+:artifactID: __<artifactID>__
+:package: __<package_name>__
+:applicationHome: __<application_home>__
+:mainClassPathCommon: org/jboss/as/quickstarts
+:packageCommon:  org.jboss.as.quickstarts
