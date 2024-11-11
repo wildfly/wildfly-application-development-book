@@ -2,7 +2,10 @@
 
 :ProductShortName: WildFly
 :JEEE: Jakarta EE
+:JEE: {JEEE}
 :GettingStartedDevelopingApplications: Developing applications for {ProductShortName}
+:wildflyversion: 34.0.0.Final
+:wildflyPluginVersion: 5.0.1.Final
 
 :productNameInMaven: wildfly
 :cloudPlatform: OpenShift
@@ -60,4 +63,4 @@ New attributes, delete others when these are finalized
 :package: __<package_name>__
 :applicationHome: __<application_home>__
 :mainClassPathCommon: org/jboss/as/quickstarts
-:packageCommon:  org.jboss.as.quickstarts
+:packageCommon: org.jboss.as.quickstarts

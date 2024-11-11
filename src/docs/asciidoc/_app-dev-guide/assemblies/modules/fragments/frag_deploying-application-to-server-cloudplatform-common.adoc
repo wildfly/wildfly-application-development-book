@@ -25,7 +25,7 @@ $ mkdir charts; cd charts
 
 . Create a file `helm.yaml` with the following content:
 +
-[source,yaml,optinos="nowrap",subs="+quotes,attributes"]
+[source,yaml,optinos="nowrap",subs="+quotes,attributes+"]
 ----
 build:
   uri: https://github.com/__<user>__/__<repository>__.git     <1>
