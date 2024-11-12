@@ -6,7 +6,7 @@
 +
 [source,options="nowrap"]
 ----
-$ mvn verify -Pintegration-testing -Dserver.host="http://localhost:8080"
+$ mvn verify -Pintegration-testing
 ----
 +
 [NOTE]

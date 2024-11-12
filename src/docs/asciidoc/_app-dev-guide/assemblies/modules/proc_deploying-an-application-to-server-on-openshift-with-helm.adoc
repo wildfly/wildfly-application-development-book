@@ -16,9 +16,13 @@ For more information, see xref:preparing-an-application-for-deployment-on-opensh
 
 include::fragments/frag_deploying-application-to-server-cloudplatform-common.adoc[]
 
-. To access the application, navigate to the Application URL of the deployment in a browser.
+. To access the application, navigate to the following address in a browser:
 +
-You are redirected to the servlet at path "/HelloWorld" and you get the following message:
+`http://_<APPLICATION_URL>_/helloworld` 
++
+Replacing _<APPLICATION_URL>_ with its value that is printed in the output of the command.
++
+You are redirected to http://_<APPLICATION_URL>_/helloworld/HelloWorld and you get the following message:
 +
 ----
 Hello World!

@@ -10,7 +10,7 @@ You can deploy an application to {ProductShortname} by using the {ProductShortna
 
 * You have created an application.
 +
-For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet].
+For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet application].
 
 include::fragments/frag_building-and-deploying-to-baremetal-common.adoc[]
 

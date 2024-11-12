@@ -17,18 +17,20 @@ This guide covers how to develop, from scratch, test, and deploy applications on
 
 //{ProuctShortName} provides a set of quickstarts to help you quickly deploy different Jakarta EE applications to {ProuctShortName}. 
 
-The following guide provides instructions for creating from scratch, deploying, and testing Jakarta EE applications on {ProductShortName} running on different platforms.
+The following guide provides instructions for creating Jakarta EE applications from scratch, deploying them to {ProductShortName} running on different platforms and and testing the deployed applications. 
 
 //{ProductShortName} uses Maven as the project management tool. 
 
-The first four chapters guide you through the following stages:
-
+The first four chapters guide you through creating, deploying and testing a Hello World Servlet application. The subsequent chapters guide you through creating applications based on other Jakarta EE technologies.
+ 
+////
 * Creating a Maven project and adding the required Maven dependencies to your project.
 * Creating a Hello World Servlet application.
-* Building and deploying the Hello World Servlet to {ProductShortName} running on bare metal and {CloudPlatform}.
-* Testing the Hello World Servlet to {ProductShortName} running on bare metal and {CloudPlatform}.
+* Building and deploying the Hello World Servlet application to {ProductShortName} running on bare metal and {CloudPlatform}.
+* Testing the Hello World Servlet application deployed to {ProductShortName} running on bare metal and {CloudPlatform}.
+////
 
-The subsequent chapters guide you through creating applications based on other Jakarta EE technologies. 
+ 
 
 
 :artifactID: helloworld

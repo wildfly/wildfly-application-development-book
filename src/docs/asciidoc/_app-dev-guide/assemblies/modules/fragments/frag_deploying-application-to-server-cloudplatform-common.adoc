@@ -59,7 +59,7 @@ $ helm repo update {helmName}
 +
 [source,options="nowrap",subs=attributes+]
 ----
-$ helm install helloworld -f helm.yaml {helmChart}
+$ helm install {artifactID} -f helm.yaml {helmChart}
 ----
 
 .Verification
@@ -68,7 +68,7 @@ $ helm install helloworld -f helm.yaml {helmChart}
 +
 [source,options="nowrap",subs=attributes+]
 ----
-$ APPLICATION_URL=https://$(oc get route {helm-app-name} --template='{{ .spec.host }}') &&
+$ APPLICATION_URL=https://$(oc get route {artifactID} --template='{{ .spec.host }}') &&
 echo "" &&
 echo "Application URL: $APPLICATION_URL"
 ----

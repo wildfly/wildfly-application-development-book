@@ -6,7 +6,7 @@
 = Building and deploying an application on a provisioned server
 
 [role="_abstract"]
-You can package the application with a provisioned server.
+include::fragments/frag_provisioned-server-intro.adoc[]
 
 include::fragments/frag_application-home-info.adoc[]
 
@@ -14,41 +14,21 @@ include::fragments/frag_application-home-info.adoc[]
 
 * You have created an application.
 +
-For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet].
+For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet application].
 
 include::fragments/frag_building-and-deploying-to-provisioned-server-common.adoc[]
 
 .Verification
 
-. Navigate to the directory containing the provisioned server.
+. Navigate to the address `http://localhost:8080/helloworld` in a browser.
 +
-[source,options="nowrap"]
-----
-$ cd target/server
-----
-
-. Start the server.
-+
-[source,options="nowrap"]
-----
-$ ./bin/standalone.sh
-----
-+
-In the log, you see that the application has been deployed as `ROOT.war`
-+
-----
-...
-21:05:35,275 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 35) WFLYSRV0010: Deployed "ROOT.war" (runtime-name : "ROOT.war")
-...
-----
-
-. To access the application, navigate to the address `http://localhost:8080/` in a browser.
-+
-You are redirected to http://localhost:8080/HelloWorld and you get the following message:
+You are redirected to http://localhost:8080/helloworld/HelloWorld and you get the following message:
 +
 ----
 Hello World!
 ----
+
+You can stop the running server with the `mvn wildfly:shutdown` command.
 
 [role="_additional-resources"]
 .Next steps

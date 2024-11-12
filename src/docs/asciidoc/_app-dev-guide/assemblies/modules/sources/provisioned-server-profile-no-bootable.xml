@@ -1,0 +1,32 @@
+<project>
+    ...
+    <profiles>
+        ...
+        <profile>
+            <id>provisioned-server</id>                            <!--1-->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>{provisioningMavenPluginGroupID}</groupId>
+                        <artifactId>{provisioningeapMavenPluginArtifactID}</artifactId>
+                        <configuration>
+                            <discover-provisioning-info>             <!--2-->
+                                <version>${version.server}</version>
+                            </discover-provisioning-info>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>package</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

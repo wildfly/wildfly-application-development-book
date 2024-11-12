@@ -7,5 +7,5 @@
 +
 [source,options="nowrap",subs=attributes+]
 ----
-$ mvn verify -Pintegration-testing -Dserver.host=https://$(oc get route {helm-app-name} --template='{{ .spec.host }}')
+$ mvn verify -Pintegration-testing -Dserver.host=https://$(oc get route {artifactID} --template='{{ .spec.host }}')
 ----

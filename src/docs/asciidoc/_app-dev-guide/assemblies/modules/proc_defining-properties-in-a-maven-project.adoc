@@ -20,12 +20,7 @@ include::fragments/frag_prereq-initialize-maven-project.adoc[]
 ----
 <project>
    ...
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <version.server>{JBossServerBOMVersion}</version.server>
-    </properties>
+include::sources/properties-base.xml[]
 </project>
 ----
 
