@@ -21,7 +21,6 @@ include::fragments/frag_prereq-initialize-maven-project.adoc[]
 <properties>
     ...
     <version.plugin.wildfly>{wildflyMavenPluginVersion}</version.plugin.wildfly>
-    <version.plugin.war>3.3.2</version.plugin.war>
 </properties>
 ----
 
@@ -32,7 +31,7 @@ include::fragments/frag_prereq-initialize-maven-project.adoc[]
 include::sources/plugin-management-pom.xml[]
 ----
 <1> You can use the `wildfly-maven-plugin` to deploy an application to {ProductShortname} using the `wildfly:deploy` command.
-<2> You need to manage the war plug-in version to ensure compatibility with JDK17+.
+//<2> You need to manage the war plug-in version to ensure compatibility with JDK17+.
 
 [role="_additional-resources"]
 .Next steps

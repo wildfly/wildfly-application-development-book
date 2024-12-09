@@ -18,18 +18,20 @@ endif::[]
 [role="_abstract"]
 To ensure that the Hello World application deployed on {ProductShortName} is working, you can add integration tests.
 
-To add tests for an application deployed on a {ProductShortName} server running on bare metal, follow these procedures:
+To add tests for an application deployed on a standard {ProductShortName} server, or an application deployed on a provisioned server running on bare metal, follow these procedures:
 
 * xref:adding-the-maven-dependencies-required-for-junit-tests_testing-an-application-deployed-to-server[Adding the Maven dependencies and profile required for integration tests]
 * xref:creating-a-test-class-to-test-an-application_testing-an-application-deployed-to-server[Creating a test class to test an application]
 * xref:testing-an-application-deployed-to-server-running-on-bare-metal_testing-an-application-deployed-to-server[Testing an application deployed on {ProductShortName} that is running on bare metal]
 
+////
 To add tests for an application deployed on a provisioned {ProductShortName} server, follow these procedures:
 
 * xref:adding-the-maven-dependencies-required-for-junit-tests_testing-an-application-deployed-to-server[Adding the Maven dependencies and profile required for integration tests]
 * xref:creating-a-test-class-to-test-an-application_testing-an-application-deployed-to-server[Creating a test class to test an application]
 * xref:testing-an-application-deployed-on-a-provisioned-server_testing-an-application-deployed-to-server[Testing an application deployed on a provisioned server]
 
+////
 To add tests for an application deployed on a {ProductShortName} server running on {cloudPlatform}, follow these procedures:
 
 * xref:adding-the-maven-dependencies-required-for-junit-tests_testing-an-application-deployed-to-server[Adding the Maven dependencies and profile required for integration tests]
@@ -42,7 +44,7 @@ include::{pathToModules}/proc_creating-a-test-class-to-test-an-application.adoc[
 
 include::{pathToModules}/proc_testing-an-application-deployed-to-server-running-on-bare-metal.adoc[leveloffset=+1]
 
-include::{pathToModules}/proc_testing-an-application-deployed-on-a-provisioned-server.adoc[leveloffset=+1]
+//include::{pathToModules}/proc_testing-an-application-deployed-on-a-provisioned-server.adoc[leveloffset=+1]
 
 include::{pathToModules}/proc_testing-an-application-deployed-to-server-on-cloudplaform.adoc[leveloffset=+1]
 

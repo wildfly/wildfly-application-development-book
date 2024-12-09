@@ -12,7 +12,7 @@
 
 * You have created an application.
 +
-For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet].
+For more information, see xref:creating-a-hello-world-servlet_default[Creating a Hello World servlet application].
 * You have created a Git repository.
 
 include::fragments/frag_preparing-an-application-for-cloudplatform-common.adoc[]

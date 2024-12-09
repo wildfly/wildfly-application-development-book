@@ -3,22 +3,46 @@
     <profiles>
         ...
         <profile>
-            <id>provisioned-server</id>
+            <id>provisioned-server</id>                            <!--1-->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>{provisioningMavenPluginGroupID}</groupId>
                         <artifactId>{provisioningeapMavenPluginArtifactID}</artifactId>
                         <configuration>
-                            <feature-packs>                                        <!--1-->
-                                <feature-pack>                                   
-                                    <location>org.wildfly:wildfly-galleon-pack:${version.server}</location>
-                                </feature-pack>
-                            </feature-packs>
-                            <layers>                                               <!--2-->
-                                <layer>{cloudLayerName}</layer>                   
-                            </layers>
-                            <name>ROOT.war</name>                                  <!--3-->
+                            <discover-provisioning-info>             <!--2-->
+                                <version>${version.server}</version>
+                            </discover-provisioning-info>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>package</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>bootable-jar</id>                                   <!--3-->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>{provisioningMavenPluginGroupID}</groupId>
+                        <artifactId>{provisioningeapMavenPluginArtifactID}</artifactId>
+                        <configuration>
+                            <discover-provisioning-info>           <!--4-->
+                                <version>${version.server}</version>
+                            </discover-provisioning-info>
+                            <bootable-jar>true</bootable-jar>
                         </configuration>
                         <executions>
                             <execution>

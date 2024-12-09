@@ -1,0 +1,15 @@
+////
+Bootable jar is only included in hello world servlet application as of now.
+Therefore, information related to bootable jar is included inside ifeval, which checks whether the artifact id matches that of the hello world servlet.
+////
+
+Instead of deploying your applications to an existing {ProductShortName} server distribution, you can provision a {ProductShortName} server to deploy and run an application by using the {ProductShortName} Maven plug-in. The following procedure demonstrates configuring and using the {ProductShortName} Maven plug-in.
+
+ifeval::["{artifactID}" == "helloworld"]
+There are two ways to package an application in the provisioned 
+server:
+
+* Provision the server with the application deployed in the `target/server` directory. This is similar to the standard application deployment. In this procedure, the "provisioned-server" profile is used for this kind of packaging.
+
+* Alternatively, you can package the server with the application deployed as an executable Java Archive (jar). In this case you cannot easily change the application as it is within a jar file. However, you can start the server with the application deployed by simply using the `java -jar` command. In this procedure, the "bootable-jar" profile is used for this kind of packaging.
+endif::[]

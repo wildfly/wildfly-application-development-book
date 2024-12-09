@@ -15,11 +15,11 @@ endif::[]
 [role="_abstract"]
 You can deploy your application on a {ProductShortName} server running on bare metal or on {cloudPlatform}.
 
-To deploy your application on a {ProductShortName} server running on bare metal, follow this procedure:
+To deploy your application on a standard {ProductShortName} distribution running on bare metal, follow this procedure:
 
 * xref:deploying-an-application-to-a-bare-metal-installation_deploying-an-application-to-the-server[Building and deploying an application to a bare metal installation]
 
-To deploy your application on a provisioned {ProductShortName} server, follow this procedure:
+To deploy your application on a provisioned {ProductShortName} running on bare metal, follow this procedure:
 
 * xref:deploying-an-application-to-a-provisioned-server_deploying-an-application-to-the-server[Building and deploying an application on a provisioned server]
 
