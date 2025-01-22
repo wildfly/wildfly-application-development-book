@@ -1,0 +1,130 @@
+:JBDSProductName: Red Hat CodeReady Studio
+:thisRepoLink: https://github.com/theashiot/wildfly-application-development-book
+:thisRepoName: wildfly-application-development-book
+
+[[jboss_developer_contributing_guide]]
+= JBoss Developer Contributing Guide
+
+[[join_the_mailing_list]]
+== Join the Mailing list
+
+To monitor and participate in the latest development discussions, join the JBoss developer mailing list here: https://lists.jboss.org/mailman/listinfo/jbossdeveloper
+
+== Contribute to the guide
+
+=== Purpose of the guide
+
+* To provide Jakarta EE developers an easy to use guide to get started writing applications for WildFly.
+
+=== Basic Steps
+
+To contribute to the quickstarts, fork the link:{thisRepoLink}[{thisRepoName}] repository to your own GitHub, clone your fork, check out a topic branch from the `main` branch, commit your work and push to your own repository, and submit pull requests back to the `main` branch.
+
+If you don't have the GitHub client (`git`), get it from: <http://git-scm.com/>
+
+
+. Fork the link:{thisRepoLink}[{thisRepoName}] repository. This creates the project under your own GitHub ID.
+
+. Clone your forked repository. This creates and populates a directory on your local file system, for example `mydoc/` with the default remote repository name `origin`.
++
+[source,subs="+quotes",options="nowrap"]
+----
+git clone https://github.com/__YOUR_USER_NAME__/wildfly-application-development-book.git
+----
+. Navigate to the newly created directory, for example:
++
+[source,options="nowrap"]
+----
+cd mydoc/
+----
+. Add the remote `upstream` repository so you can fetch any changes to the original forked repository.
++
+[source,options="nowrap"]
+----
+git remote add upstream git@github.com:theashiot/wildfly-application-development-book.git
+----
+
+. Get the latest files from the `upstream` repository.
++
+[source,options="nowrap"]
+----
+git fetch upstream
+----
+
+. Check out a local topic branch to work with your new updates.
+
+* Fetch the latest source from Git, then check out the latest source code from the main branch of the upstream repository into your own branch using the following syntax.
++
+[source,subs="+quotes",options="nowrap"]
+----
+git fetch upstream
+git checkout -b __TOPIC_BRANCH_NAME__ upstream/main
+----
+
+* If you are fixing a JIRA, it is a good practice to use the number in the branch name.
++
+[source,options="nowrap"]
+----
+git checkout -b __JIRA_ID__ upstream/main
+----
+
+. Use the `git add` command to add new or changed file contents to the staging area.
++
+[source,options="nowrap"]
+----
+git add __file_name__
+----
+
+
+. Use the `git status` command to view the status of the files in the directory and in the staging area and ensure that all modified files are properly staged:
++
+[source,options="nowrap"]
+----
+git status
+----
+
+. Commit your changes to your local topic branch.
++
+[source,options="nowrap"]
+----
+git commit -m 'Description of change...'
+----
+
+. Update your branch with any changes made upstream since you started.
+* Fetch the latest changes from upstream.
++
+[source,options="nowrap"]
+----
+git fetch upstream
+----
+* Rebase to apply any updates to your branch.
++
+[source,subs="+quotes",options="nowrap"]
+----
+git rebase upstream/main
+----
+
+* If anyone has committed changes to files that you have also changed, you might see conflicts. Resolve the conflicted files, add them using `git add`, and continue the rebase:
++
+[source,subs="+quotes",options="nowrap"]
+----
+git add __CONFLICTED_FILE_NAME__
+git rebase --continue
+----
+* If there were conflicts, it is a good idea to test your changes again to make they still work.
+
+. Push your local topic branch to your GitHub forked repository. This creates a branch on your Git fork repository with the same name as your local topic branch name.
++
+[source,options="nowrap"]
+----
+git push origin HEAD
+----
++
+NOTE: The above command assumes your own remote Git repository is named `origin`. You can verify your forked remote repository name using the command `git remote -v`.
+
+. Browse to the __TOPIC_BRANCH_NAME__ branch on your forked Git repository and https://help.github.com/articles/creating-a-pull-request//[create a Pull Request]. Give it a clear title and description.
+
+[[general_guidelines]]
+=== General Guidelines
+
+* The sample project should be formatted using the JBoss EAP profiles found at <http://github.com/jboss/ide-config/tree/master/>
