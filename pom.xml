@@ -7,12 +7,13 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.asciidoctor.maven</groupId>
-	<artifactId>asciidoc-to-html-example</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<name>AsciiDoc to HTML Maven Example</name>
-	<description>WildFly application development guide using Asciidoctor Maven
-		plugin.</description>
+
+	<groupId>org.wildfly</groupId>
+	<artifactId>docs-app-development-guide</artifactId>
+	<version>36.0.0.Beta1-SNAPSHOT</version>
+
+	<name>WildFly Application Development Guide</name>
+	<description>WildFly application development guide using Asciidoctor Maven plugin.</description>
 
 	<licenses>
 		<license>
@@ -24,8 +25,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<!-- the Maven project should use the minimum Java SE version supported -->
+		<maven.compiler.release>17</maven.compiler.release>
 		<asciidoctor.maven.plugin.version>3.0.0</asciidoctor.maven.plugin.version>
 		<asciidoctorj.version>2.5.13</asciidoctorj.version>
 		<jruby.version>9.4.6.0</jruby.version>
