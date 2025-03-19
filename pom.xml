@@ -30,6 +30,7 @@
 		<asciidoctor.maven.plugin.version>3.0.0</asciidoctor.maven.plugin.version>
 		<asciidoctorj.version>2.5.13</asciidoctorj.version>
 		<jruby.version>9.4.6.0</jruby.version>
+		<plugin.version>5.1.1.Final</plugin.version>
 	</properties>
 
 	<build>
@@ -67,7 +68,7 @@
 						<endpoint-url>https://example.org</endpoint-url>
 						<sourcedir>${project.build.sourceDirectory}</sourcedir>
 						<project-version>${project.version}</project-version>
-						<plugin-version>5.0.1.Final</plugin-version>
+						<plugin-version>${plugin.version}</plugin-version>
 					</attributes>
 				</configuration>
 				<executions>
