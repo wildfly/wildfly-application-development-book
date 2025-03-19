@@ -4,8 +4,8 @@
 :JEEE: Jakarta EE
 :JEE: {JEEE}
 :GettingStartedDevelopingApplications: Developing applications for {ProductShortName}
-:wildflyversion: 34.0.0.Final
-:wildflyPluginVersion: 5.0.1.Final
+:wildflyversion: {project-version}
+:wildflyPluginVersion: {plugin-version}
 
 :productNameInMaven: wildfly
 :cloudPlatform: OpenShift
@@ -36,7 +36,6 @@
 :wildflyEEGalleonpackLocation: org.wildfly:wildfly-galleon-pack:${version.server}
 :wildflyCloudGalleonPackLocation: org.wildfly.cloud:wildfly-cloud-galleon-pack:${version.pack.cloud}
 :cloudLayerName: cloud-server
-:wildflyCloudPackVersion: 5.0.0.Final
 
 //BOMs
 
