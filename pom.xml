@@ -21,7 +21,7 @@
 
 	<groupId>org.wildfly</groupId>
 	<artifactId>docs-app-development-guide</artifactId>
-	<version>36.0.0.Beta1-SNAPSHOT</version>
+	<version>36.0.0.Beta1</version>
 
 	<name>WildFly Application Development Guide</name>
 	<description>WildFly application development guide using Asciidoctor Maven plugin.</description>
