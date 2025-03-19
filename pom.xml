@@ -77,6 +77,7 @@
 							<goal>process-asciidoc</goal>
 						</goals>
 						<configuration>
+							<outputDirectory>${project.build.outputDirectory}</outputDirectory>						
 							<backend>html5</backend>
 							<attributes>
 								<source-highlighter>rouge</source-highlighter>
