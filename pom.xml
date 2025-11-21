@@ -20,8 +20,8 @@
 	</parent>
 
 	<groupId>org.wildfly</groupId>
-	<artifactId>docs-app-development-guide</artifactId>
-	<version>36.0.0.Final-SNAPSHOT</version>
+	<artifactId>wildfly-application-development-guide</artifactId>
+	<version>1.0.0.Final-SNAPSHOT</version>
 
 	<name>WildFly Application Development Guide</name>
 	<description>WildFly application development guide using Asciidoctor Maven plugin.</description>
@@ -41,11 +41,20 @@
 		<asciidoctor.maven.plugin.version>3.0.0</asciidoctor.maven.plugin.version>
 		<asciidoctorj.version>2.5.13</asciidoctorj.version>
 		<jruby.version>9.4.6.0</jruby.version>
+		<server.version>38.0.0.Final</server.version>
 		<plugin.version>5.1.1.Final</plugin.version>
+		<!-- skip the sources artifact, would be the same as jar artifact -->
+		<maven.source.skip>true</maven.source.skip>
 	</properties>
 
 	<build>
-		<defaultGoal>process-resources</defaultGoal>
+		<!-- include the resources in the jar, so we can build it elsewhere -->
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/docs/asciidoc</directory>
+			</resource>
+		</resources>
+		<!-- builds the doc, but the html file is not included in the jar -->
 		<plugins>
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
@@ -68,17 +77,9 @@
 					</dependency>
 				</dependencies>
 				<configuration>
-					<sourceDirectory>src/docs/asciidoc</sourceDirectory>
-					<!-- If you set baseDir to ${project.basedir}, top-level
-					includes are resolved relative to the project root -->
-					<!--
-                    <baseDir>${project.basedir}</baseDir>
-                    -->
 					<!-- Attributes common to all output formats, and versions to be injected -->
 					<attributes>
-						<endpoint-url>https://example.org</endpoint-url>
-						<sourcedir>${project.build.sourceDirectory}</sourcedir>
-						<project-version>${project.version}</project-version>
+						<server-version>${server.version}</server-version>
 						<plugin-version>${plugin.version}</plugin-version>
 					</attributes>
 				</configuration>
@@ -90,7 +91,6 @@
 							<goal>process-asciidoc</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.outputDirectory}</outputDirectory>						
 							<backend>html5</backend>
 							<attributes>
 								<source-highlighter>rouge</source-highlighter>
