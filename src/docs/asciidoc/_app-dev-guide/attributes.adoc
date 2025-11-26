@@ -4,7 +4,7 @@
 :JEEE: Jakarta EE
 :JEE: {JEEE}
 :GettingStartedDevelopingApplications: Developing applications for {ProductShortName}
-:wildflyversion: {project-version}
+:serverVersion: {server-version}
 :wildflyPluginVersion: {plugin-version}
 
 :productNameInMaven: wildfly
@@ -39,7 +39,6 @@
 
 //BOMs
 
-:JBossServerBOMVersion: {wildflyversion}
 :JBossGroupID: org.wildfly.bom
 :JBossBOMWithTools: wildfly-ee-with-tools
 

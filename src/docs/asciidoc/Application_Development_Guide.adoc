@@ -3,7 +3,7 @@ include::_app-dev-guide/attributes.adoc[]
 :toc:
 :numbered:
 :toclevels: 4
-:appication_development:
+:application_development:
 
 = {GettingStartedDevelopingApplications}
 
