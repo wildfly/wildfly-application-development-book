@@ -21,7 +21,7 @@
 
 	<groupId>org.wildfly</groupId>
 	<artifactId>wildfly-application-development-guide</artifactId>
-	<version>1.0.0.Final-SNAPSHOT</version>
+	<version>1.0.0.Final</version>
 	<packaging>pom</packaging>
 
 	<name>WildFly Application Development Guide</name>
