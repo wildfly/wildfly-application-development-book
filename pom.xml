@@ -11,7 +11,7 @@
 	<parent>
 		<groupId>org.jboss</groupId>
 		<artifactId>jboss-parent</artifactId>
-		<version>47</version>
+		<version>51</version>
 		<!--
         Maintain separation between the artifact id and the version to help prevent
         merge conflicts between commits changing the GA and those changing the V.
@@ -25,6 +25,7 @@
 
 	<name>WildFly Application Development Guide</name>
 	<description>WildFly application development guide using Asciidoctor Maven plugin.</description>
+	<url>https://github.com/wildfly/wildfly-application-development-book</url>
 
 	<licenses>
 		<license>
@@ -33,6 +34,25 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+	<developers>
+		<developer>
+			<id>theashiot</id>
+			<name>Ashwin Mehendale</name>
+			<url>https://github.com/theashiot</url>
+		</developer>
+		<developer>
+			<id>emmartins</id>
+			<name>Eduardo Martins</name>
+			<url>https://github.com/emmartins</url>
+		</developer>
+		<developer>
+			<id>wildfly.org</id>
+			<name>WildFly Community</name>
+			<organization>wildfly.org</organization>
+			<organizationUrl>http://wildfly.org</organizationUrl>
+		</developer>
+	</developers>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -45,7 +65,16 @@
 		<plugin.version>5.1.1.Final</plugin.version>
 		<!-- skip the sources artifact, would be the same as jar artifact -->
 		<maven.source.skip>true</maven.source.skip>
+		<!-- Repository Deployment Settings -->
+		<nexus.repository.staging>wildfly-staging</nexus.repository.staging>
+		<nexus.staging.tag>wildfly-application-development-book-${project.version}</nexus.staging.tag>
 	</properties>
+
+	<scm>
+		<connection>scm:git:git@github.com:wildfly/wildfly-application-development-book.git</connection>
+		<developerConnection>scm:git:git@github.com:wildfly/wildfly-application-development-book.git</developerConnection>
+		<url>https://github.com/wildfly/wildfly-application-development-book</url>
+	</scm>
 
 	<build>
 		<!-- include the resources in the jar, so we can build it elsewhere -->
