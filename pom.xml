@@ -61,7 +61,7 @@
 		<maven.compiler.release>17</maven.compiler.release>
 		<asciidoctor.maven.plugin.version>3.0.0</asciidoctor.maven.plugin.version>
 		<asciidoctorj.version>2.5.13</asciidoctorj.version>
-		<jruby.version>9.4.6.0</jruby.version>
+		<jruby.version>9.4.12.1</jruby.version>
 		<server.version>38.0.0.Final</server.version>
 		<plugin.version>5.1.1.Final</plugin.version>
 		<!-- Repository Deployment Settings -->
